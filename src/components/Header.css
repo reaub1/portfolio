@@ -1,16 +1,43 @@
 header {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #ddd;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #646cff 0%, #0ea5e9 100%);
+  color: white;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
   }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
+
+  header p {
+    font-size: 1rem;
   }
-  
-  p {
-    font-size: 1.2rem;
-    color: #666;
+}
+
+/* Responsive - Téléphones */
+@media (max-width: 480px) {
+  header {
+    padding: 2rem 1rem;
   }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+}
