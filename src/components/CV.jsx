@@ -12,7 +12,7 @@ function CV() {
           <p>Nationality: CH - FR | Computer Science Student</p>
         </div>
 
-        <div className="cv-section">
+        <div className="cv-section fade-in">
           <h3>Education</h3>
           <div className="cv-item">
             <h4>2023–Present: Engineering degree in Computer Science, CNAM EI, Eckbolsheim, France</h4>
@@ -32,7 +32,7 @@ function CV() {
           </div>
         </div>
 
-        <div className="cv-section">
+        <div className="cv-section fade-in">
           <h3>Projects</h3>
           <div className="cv-item">
             <h4>November 2025 – Shell Project</h4>
@@ -76,7 +76,7 @@ function CV() {
           </div>
         </div>
 
-        <div className="cv-section">
+        <div className="cv-section fade-in">
           <h3>Skills</h3>
           <div className="cv-skills">
             <div>
@@ -102,7 +102,7 @@ function CV() {
           </div>
         </div>
 
-        <div className="cv-section">
+        <div className="cv-section fade-in">
           <h3>Professional Experience</h3>
           <div className="cv-item">
             <h4>September 2022–Present – Computer engineering apprentice, Safran Landing Systems, Molsheim, France</h4>
@@ -118,12 +118,12 @@ function CV() {
           </div>
         </div>
 
-        <div className="cv-section">
+        <div className="cv-section fade-in">
           <h3>Activities</h3>
           <p>Participated in "Nuit de l'Informatique" (2021, 2023, 2024, 2025), awarded a gold medal in a challenge. Participated in AWS GameDay – Frugality Fest (December 2024).</p>
         </div>
 
-        <div className="cv-section">
+        <div className="cv-section fade-in">
           <h3>Interests</h3>
           <div>
             <h4>Hobbies</h4>
