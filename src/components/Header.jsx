@@ -2,8 +2,8 @@ import './Header.css';
 const Header = () => {
     return (
       <header>
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>Je suis Robin Bechlem, développeur passionné.</p>
+        <h1>Welcome on my portfolio</h1>
+        <p>I am Robin Bechlem, a junior software engineer.</p>
       </header>
     );
   };

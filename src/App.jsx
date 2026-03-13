@@ -1,7 +1,6 @@
 import './App.css'
 import Header from './components/Header'
 import About from './components/About'
-import Skills from './components/Skills'
 import CV from './components/CV'
 import Footer from './components/Footer'
 
@@ -11,7 +10,6 @@ function App() {
       <Header />
       <main>
         <About />
-        <Skills />
         <CV />
       </main>
       <Footer />
