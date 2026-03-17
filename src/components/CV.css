@@ -2,15 +2,15 @@
   padding: 3rem 2rem;
   background: linear-gradient(135deg, rgba(100, 108, 255, 0.12), rgba(14, 165, 233, 0.08));
   margin: 2rem auto;
-  max-width: 1280px;
+  max-width: 1100px;
   border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
 }
 
 .cv-wrapper h2 {
   font-size: 2.8rem;
   margin-bottom: 2rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
   text-align: center;
 }
 
@@ -24,20 +24,21 @@
   text-align: center;
   padding: 1.5rem 1rem;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.87);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(100, 108, 255, 0.25);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
 }
 
 .cv-header h3 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .cv-header p {
   margin: 0.25rem 0;
-  color: #4b5563;
+  color: var(--text-secondary);
 }
 
 .cv-header p a {
@@ -75,14 +76,16 @@
 .cv-download-btn:focus-visible {
   outline: 2px solid #646cff;
   outline-offset: 3px;
+  border-radius: 999px;
 }
 
 .cv-section {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--bg-card);
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-color);
+  transition: background 0.3s ease;
 }
 
 .cv-section h3 {
@@ -95,24 +98,24 @@
 
 .cv-item {
   margin-bottom: 1.25rem;
-  border-bottom: 1px solid rgba(100, 108, 255, 0.3);
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.5rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cv-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
 }
 
 .cv-item h4 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .cv-item p {
-  color: #4b5563;
+  color: var(--text-secondary);
   line-height: 1.65;
 }
 
@@ -126,18 +129,18 @@
   background: linear-gradient(135deg, rgba(100, 108, 255, 0.1), rgba(14, 165, 233, 0.08));
   padding: 1.25rem;
   border-radius: 12px;
-  border: 1px solid rgba(100, 108, 255, 0.25);
+  border: 1px solid var(--border-color);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.05);
 }
 
 .cv-skills h4 {
   margin-bottom: 0.8rem;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }
 
 .cv-skills p {
   margin: 0;
-  color: #4b5563;
+  color: var(--text-secondary);
 }
 
 /* ---- Skill badges ---- */
@@ -171,6 +174,13 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Dark mode overrides for skill badges */
+[data-theme="dark"] .skill-badge--lang    { color: #a5b4fc; border-color: rgba(165, 180, 252, 0.4); background: rgba(165, 180, 252, 0.1); }
+[data-theme="dark"] .skill-badge--framework { color: #67e8f9; border-color: rgba(103, 232, 249, 0.4); background: rgba(103, 232, 249, 0.1); }
+[data-theme="dark"] .skill-badge--tool    { color: #6ee7b7; border-color: rgba(110, 231, 183, 0.4); background: rgba(110, 231, 183, 0.1); }
+[data-theme="dark"] .skill-badge--area    { color: #fcd34d; border-color: rgba(252, 211, 77, 0.4); background: rgba(252, 211, 77, 0.1); }
+[data-theme="dark"] .skill-badge--soft    { color: #f9a8d4; border-color: rgba(249, 168, 212, 0.4); background: rgba(249, 168, 212, 0.1); }
 
 /* Category colours */
 .skill-badge--lang {
@@ -244,7 +254,7 @@
   height: 12px;
   border-radius: 50%;
   background: #646cff;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--bg-card);
   box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.35);
   flex-shrink: 0;
   z-index: 1;
@@ -267,7 +277,7 @@
 .timeline-content h4 {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin: 0 0 0.2rem;
 }
 
@@ -279,7 +289,7 @@
 }
 
 .timeline-content p:not(.timeline-org) {
-  color: #4b5563;
+  color: var(--text-secondary);
   line-height: 1.65;
   margin: 0;
   font-size: 0.9rem;

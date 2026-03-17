@@ -4,6 +4,11 @@
   background: rgba(20, 20, 20, 0.92);
   color: rgba(255, 255, 255, 0.84);
   font-size: 0.95rem;
+  transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .site-footer {
+  background: rgba(8, 8, 18, 0.96);
 }
 
 .site-footer p {
@@ -36,7 +41,7 @@
 }
 
 .footer-link:focus-visible {
-  outline: 2px solid rgba(255,255,255,0.8);
+  outline: 2px solid rgba(255, 255, 255, 0.8);
   outline-offset: 3px;
   border-radius: 4px;
 }

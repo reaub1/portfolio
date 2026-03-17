@@ -1,3 +1,30 @@
+/* ---- CSS Custom Properties ---- */
+:root {
+  --bg-primary:      #f8f9ff;
+  --bg-card:         #ffffff;
+  --bg-card-hover:   #f0f0ff;
+  --text-primary:    #1a1a1a;
+  --text-secondary:  #555;
+  --text-muted:      #888;
+  --border-color:    rgba(100, 108, 255, 0.15);
+  --shadow-card:     0 4px 20px rgba(0, 0, 0, 0.08);
+  --navbar-bg:       rgba(248, 249, 255, 0.85);
+  --hero-text:       #fff;
+}
+
+[data-theme="dark"] {
+  --bg-primary:      #0f0f1a;
+  --bg-card:         #1a1a2e;
+  --bg-card-hover:   #22223a;
+  --text-primary:    #e8e8f0;
+  --text-secondary:  #aaa;
+  --text-muted:      #666;
+  --border-color:    rgba(100, 108, 255, 0.25);
+  --shadow-card:     0 4px 20px rgba(0, 0, 0, 0.4);
+  --navbar-bg:       rgba(15, 15, 26, 0.85);
+  --hero-text:       #fff;
+}
+
 *,
 *::before,
 *::after {

@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robin Bechlem — Portfolio</title>
@@ -10,6 +18,7 @@
     <meta property="og:description" content="Frontend Developer &amp; Engineer. Discover my projects and get in touch." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/favicon.svg" />
+    <meta property="og:url" content="https://robinbechlem.dev" />
   </head>
   <body>
     <div id="root"></div>

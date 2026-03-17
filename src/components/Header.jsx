@@ -14,11 +14,42 @@ const DELETING_SPEED = 55;
 const PAUSE_AFTER_WORD = 1400;
 const PAUSE_BEFORE_DELETE = 300;
 
+/* ---- SVG icons ---- */
+const MoonIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z" />
+  </svg>
+);
+
+const SunIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="5" />
+    <line x1="12" y1="1"  x2="12" y2="3"  stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="4.22" y1="4.22"   x2="5.64" y2="5.64"   stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="1"  y1="12" x2="3"  y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"   stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"   stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const hamburgerRef = useRef(null);
 
-  // Typewriter state
+  /* ---- Dark mode ---- */
+  const [isDark, setIsDark] = useState(
+    () => localStorage.getItem('theme') === 'dark'
+  );
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  }, [isDark]);
+
+  /* ---- Typewriter ---- */
   const [displayedText, setDisplayedText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -29,10 +60,8 @@ const Header = () => {
     let timeout;
 
     if (!isDeleting && displayedText === currentWord) {
-      // Finished typing — pause then start deleting
       timeout = setTimeout(() => setIsDeleting(true), PAUSE_AFTER_WORD);
     } else if (isDeleting && displayedText === '') {
-      // Finished deleting — move to next word
       timeout = setTimeout(() => {
         setIsDeleting(false);
         setWordIndex((prev) => (prev + 1) % TYPEWRITER_STRINGS.length);
@@ -79,31 +108,47 @@ const Header = () => {
   return (
     <>
       <nav className="navbar" aria-label="Main navigation">
-        <a className="navbar-brand" href="#" onClick={handleBrandClick}>Robin Bechlem</a>
+        <a className="navbar-brand" href="#" onClick={handleBrandClick} aria-label="Back to top">Robin Bechlem</a>
 
-        <button
-          ref={hamburgerRef}
-          className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
-          aria-label="Toggle navigation"
-          aria-expanded={menuOpen}
-          aria-controls="nav-menu"
-          onClick={() => setMenuOpen((prev) => !prev)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="navbar-controls">
+          <ul id="nav-menu" className={`navbar-links${menuOpen ? ' open' : ''}`}>
+            {navLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} onClick={handleLinkClick}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
 
-        <ul id="nav-menu" className={`navbar-links${menuOpen ? ' open' : ''}`}>
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a href={link.href} onClick={handleLinkClick}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
+          <button
+            className="navbar-theme-toggle"
+            aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            onClick={() => setIsDark((prev) => !prev)}
+          >
+            {isDark ? <SunIcon /> : <MoonIcon />}
+          </button>
+
+          <button
+            ref={hamburgerRef}
+            className={`navbar-hamburger${menuOpen ? ' open' : ''}`}
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            aria-controls="nav-menu"
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </nav>
 
       <header className="hero-header fade-in">
+        {/* Animated background blobs */}
+        <span className="hero-blob hero-blob--1" aria-hidden="true" />
+        <span className="hero-blob hero-blob--2" aria-hidden="true" />
+        <span className="hero-blob hero-blob--3" aria-hidden="true" />
+        <span className="hero-blob hero-blob--4" aria-hidden="true" />
+
         <div className="hero-content">
           <div className="hero-text">
             <h1>Hi, I'm Robin Bechlem</h1>

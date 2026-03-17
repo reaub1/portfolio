@@ -1,8 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Contact.css';
 
 const Contact = () => {
   const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+  const resetTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (resetTimerRef.current) clearTimeout(resetTimerRef.current);
+    };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,6 +25,7 @@ const Contact = () => {
       if (response.ok) {
         setStatus('success');
         e.target.reset();
+        resetTimerRef.current = setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
       }
