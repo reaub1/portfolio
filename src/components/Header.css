@@ -1,4 +1,149 @@
-header {
+/* ---- Sticky navbar ---- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(100, 108, 255, 0.18);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #646cff;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.navbar-brand:hover {
+  color: #535bf2;
+}
+
+.navbar-brand:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #3b3b3b;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.navbar-links li a:hover {
+  background: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+}
+
+.navbar-links li a:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Hamburger (mobile) ---- */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.18s ease;
+}
+
+.navbar-hamburger:hover {
+  background: rgba(100, 108, 255, 0.1);
+  border-color: transparent;
+}
+
+.navbar-hamburger:focus-visible {
+  outline: 2px solid #646cff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.navbar-hamburger span {
+  display: block;
+  height: 2px;
+  background: #3b3b3b;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.navbar-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.6rem 1rem;
+    position: sticky;
+    top: 0;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0 0.75rem;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li a {
+    display: block;
+    padding: 0.6rem 0.5rem;
+    border-radius: 6px;
+  }
+}
+
+/* ---- Hero header ---- */
+.hero-header {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   text-align: center;
@@ -7,37 +152,36 @@ header {
   color: white;
 }
 
-header h1 {
+.hero-header h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
-header p {
+.hero-header p {
   font-size: 1.3rem;
   opacity: 0.95;
 }
 
 @media (max-width: 768px) {
-  header h1 {
+  .hero-header h1 {
     font-size: 2rem;
   }
 
-  header p {
+  .hero-header p {
     font-size: 1rem;
   }
 }
 
-/* Responsive - Téléphones */
 @media (max-width: 480px) {
-  header {
+  .hero-header {
     padding: 2rem 1rem;
   }
 
-  header h1 {
+  .hero-header h1 {
     font-size: 1.5rem;
   }
 
-  header p {
+  .hero-header p {
     font-size: 0.9rem;
   }
 }

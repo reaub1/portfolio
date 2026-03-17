@@ -2,14 +2,20 @@ import './CV.css'
 
 function CV() {
   return (
-    <section id="cv">
+    <section id="cv" className="cv-wrapper fade-in">
       <h2>Resume</h2>
       <div className="cv-content">
         <div className="cv-header">
           <h3>Robin Bechlem</h3>
-          <p>29a, rue de la Chapelle, 68480 Koestlach, France</p>
-          <p>+33 6 38 60 81 36 | robin.bechlem@gmail.com</p>
-          <p>Nationality: CH - FR | Computer Science Student</p>
+          <p>Computer Science Student | Nationality: CH - FR</p>
+          <p>
+            <a href="mailto:robin.bechlem@gmail.com">robin.bechlem@gmail.com</a>
+            {' · '}
+            <a href="https://www.linkedin.com/in/robin-bechlem-7b948b1b9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
+          <a className="cv-download-btn" href="/robin-bechlem-cv.pdf" download>
+            ↓ Download CV
+          </a>
         </div>
 
         <div className="cv-section fade-in">
@@ -81,23 +87,51 @@ function CV() {
           <div className="cv-skills">
             <div>
               <h4>Programming Languages</h4>
-              <p>C/C++, C#, Java, Python, HTML/CSS, PHP, JavaScript, SQL, LaTeX, Bash, VBA.</p>
+              <div className="skill-badges">
+                {['C', 'C++', 'C#', 'Java', 'Python', 'JavaScript', 'PHP', 'SQL', 'HTML/CSS', 'Bash', 'LaTeX', 'VBA'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--lang">{s}</span>
+                ))}
+              </div>
             </div>
             <div>
-              <h4>Areas</h4>
-              <p>Image processing, Artificial Intelligence, Systems & Networks, OOP, Graphics, Web & software development.</p>
+              <h4>Frameworks & Engines</h4>
+              <div className="skill-badges">
+                {['React', 'Unity', 'SDL2', 'Android Studio'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--framework">{s}</span>
+                ))}
+              </div>
             </div>
             <div>
               <h4>Tools</h4>
-              <p>Visual Studio, Code::Blocks, Git, Adobe Suite, Office Suite.</p>
+              <div className="skill-badges">
+                {['Git', 'Visual Studio', 'Code::Blocks', 'Power BI', 'Adobe Suite', 'Office Suite'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--tool">{s}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4>Areas</h4>
+              <div className="skill-badges">
+                {['Image Processing', 'AI', 'Systems & Networks', 'OOP', 'Web Dev', 'Data Warehouse'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--area">{s}</span>
+                ))}
+              </div>
             </div>
             <div>
               <h4>Languages</h4>
-              <p>French (native), English (intermediate), German (basic).</p>
+              <div className="skill-badges">
+                <span className="skill-badge skill-badge--lang">French (native)</span>
+                <span className="skill-badge skill-badge--lang">English (intermediate)</span>
+                <span className="skill-badge skill-badge--lang">German (basic)</span>
+              </div>
             </div>
             <div>
               <h4>Soft Skills</h4>
-              <p>Teamwork, Adaptability, Flexibility, Autonomy.</p>
+              <div className="skill-badges">
+                {['Teamwork', 'Adaptability', 'Flexibility', 'Autonomy'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--soft">{s}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
