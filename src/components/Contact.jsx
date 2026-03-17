@@ -9,7 +9,7 @@ const Contact = () => {
     setStatus('loading');
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch('https://formspree.io/f/xgonppjq', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(e.target),
