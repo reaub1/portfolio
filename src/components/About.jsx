@@ -4,9 +4,8 @@ const About = () => {
     return (
       <section id="about" className="about fade-in">
         <h2>About me</h2>
-        <p>I am a computer science engineering student with a strong passion for information systems.</p>
-        <p>I completed 4 years of alternating work-study at Safran Landing Systems Molsheim, where I focused on improving alignment between business requirements and software development.</p>
-        <p>My goal is to bridge the gap between business needs and technical delivery through agile practices.</p>
+        <p>Computer science engineering student at CNAM EI, passionate about aligning business needs with information systems. Through 4 years of work-study at Safran Landing Systems (Molsheim), I ensure adherence between business requirements and IT solutions.</p>
+        <p>My approach spans two perspectives: on the business side, supporting stakeholders in defining and sustaining their processes through core SI pillars (data collection, storage, transformation, analysis, and delivery); on the technical side, providing development teams with modular, easily adaptable solutions built on SOLID principles, with a strong focus on quality through testing and CI/CD practices.</p>
       </section>
     );
   };
