@@ -4,6 +4,7 @@ import Header from './components/Header'
 import About from './components/About'
 import Projects from './components/Projects'
 import CV from './components/CV'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
@@ -60,15 +61,16 @@ function App() {
   }, [])
 
   return (
-    <div id="root">
+    <>
       <Header />
       <main>
         <About />
         <Projects />
         <CV />
+        <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 

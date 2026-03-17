@@ -2,7 +2,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-      <footer id="contact" className="fade-in">
+      <footer className="site-footer fade-in">
         <p>Contact me at <a href="mailto:robin.bechlem@gmail.com">robin.bechlem@gmail.com</a></p>
         <div className="footer-links">
           <a

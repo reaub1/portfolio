@@ -1,10 +1,8 @@
 .cv-wrapper {
   padding: 3rem 2rem;
   background: linear-gradient(135deg, rgba(100, 108, 255, 0.12), rgba(14, 165, 233, 0.08));
-  margin: 2rem 0;
+  margin: 2rem auto;
   max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
@@ -75,7 +73,7 @@
 }
 
 .cv-download-btn:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid #646cff;
   outline-offset: 3px;
 }
 
@@ -205,6 +203,88 @@
   color: #9d174d;
 }
 
+/* ---- Timeline ---- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(to bottom, #646cff, #0ea5e9);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot on the line */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.72rem;
+  top: 0.35rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #646cff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.35);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-date {
+  flex-shrink: 0;
+  min-width: 130px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #646cff;
+  padding-top: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.2rem;
+}
+
+.timeline-org {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #646cff;
+  margin: 0 0 0.35rem;
+}
+
+.timeline-content p:not(.timeline-org) {
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
 @media (max-width: 768px) {
   .cv-wrapper {
     padding: 1.5rem;
@@ -212,5 +292,25 @@
 
   .cv-skills {
     grid-template-columns: 1fr;
+  }
+
+  /* Timeline: stack date above content on mobile */
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .timeline-date {
+    min-width: unset;
+    font-size: 0.75rem;
+  }
+
+  .timeline-item::before {
+    left: -1.05rem;
+    top: 0.3rem;
   }
 }

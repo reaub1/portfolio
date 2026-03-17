@@ -2,7 +2,7 @@ import './CV.css'
 
 function CV() {
   return (
-    <section id="cv" className="cv-wrapper fade-in">
+    <section id="cv" className="cv-wrapper">
       <h2>Resume</h2>
       <div className="cv-content">
         <div className="cv-header">
@@ -20,21 +20,39 @@ function CV() {
 
         <div className="cv-section fade-in">
           <h3>Education</h3>
-          <div className="cv-item">
-            <h4>2023–Present: Engineering degree in Computer Science, CNAM EI, Eckbolsheim, France</h4>
-            <p>Advanced algorithms, advanced design, data structures, SOLID programming, project management, advanced systems, management, business management.</p>
-          </div>
-          <div className="cv-item">
-            <h4>2022–2023: Bachelor's degree in Computer Science, CNAM Grand Est, Strasbourg, France</h4>
-            <p>Report writing and presentation.</p>
-          </div>
-          <div className="cv-item">
-            <h4>2020–2022: DUT in Computer Science with scientific specialization, IUT Robert-Schuman, Illkirch-Graffenstaden, France</h4>
-            <p>Supervised project.</p>
-          </div>
-          <div className="cv-item">
-            <h4>2017–2020: Baccalaureate in Economic and Social Sciences, Lycée polyvalent Jean-Jacques Henner, Altkirch, France</h4>
-            <p>Honors: Mention Bien.</p>
+          <div className="timeline">
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">2023 – Present</span>
+              <div className="timeline-content">
+                <h4>Engineering degree in Computer Science</h4>
+                <p className="timeline-org">CNAM EI, Eckbolsheim, France</p>
+                <p>Advanced algorithms, advanced design, data structures, SOLID programming, project management, advanced systems, management, business management.</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">2022 – 2023</span>
+              <div className="timeline-content">
+                <h4>Bachelor's degree in Computer Science</h4>
+                <p className="timeline-org">CNAM Grand Est, Strasbourg, France</p>
+                <p>Report writing and presentation.</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">2020 – 2022</span>
+              <div className="timeline-content">
+                <h4>DUT in Computer Science with scientific specialization</h4>
+                <p className="timeline-org">IUT Robert-Schuman, Illkirch-Graffenstaden, France</p>
+                <p>Supervised project.</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">2017 – 2020</span>
+              <div className="timeline-content">
+                <h4>Baccalaureate in Economic and Social Sciences</h4>
+                <p className="timeline-org">Lycée polyvalent Jean-Jacques Henner, Altkirch, France</p>
+                <p>Honors: Mention Bien.</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -138,17 +156,31 @@ function CV() {
 
         <div className="cv-section fade-in">
           <h3>Professional Experience</h3>
-          <div className="cv-item">
-            <h4>September 2022–Present – Computer engineering apprentice, Safran Landing Systems, Molsheim, France</h4>
-            <p>Application development, software maintenance, Power BI dashboards, IT project management, Data Warehouse training for employees.</p>
-          </div>
-          <div className="cv-item">
-            <h4>April–June 2022 – Developer Intern, LPB Conseil, Strasbourg, France</h4>
-            <p>Developed Power BI dashboards, maintained ERP software.</p>
-          </div>
-          <div className="cv-item">
-            <h4>July–August 2018–2021 – Warehouse Worker, Robusta Flex, Basel, Switzerland</h4>
-            <p>Managed a Kanban stock system and performed various team-based handling tasks.</p>
+          <div className="timeline">
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">Sep 2022 – Present</span>
+              <div className="timeline-content">
+                <h4>Computer Engineering Apprentice</h4>
+                <p className="timeline-org">Safran Landing Systems, Molsheim, France</p>
+                <p>Application development, software maintenance, Power BI dashboards, IT project management, Data Warehouse training for employees.</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">Apr – Jun 2022</span>
+              <div className="timeline-content">
+                <h4>Developer Intern</h4>
+                <p className="timeline-org">LPB Conseil, Strasbourg, France</p>
+                <p>Developed Power BI dashboards, maintained ERP software.</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">Jul – Aug 2018–2021</span>
+              <div className="timeline-content">
+                <h4>Warehouse Worker</h4>
+                <p className="timeline-org">Robusta Flex, Basel, Switzerland</p>
+                <p>Managed a Kanban stock system and performed various team-based handling tasks.</p>
+              </div>
+            </div>
           </div>
         </div>
 
