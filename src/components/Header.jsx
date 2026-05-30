@@ -165,9 +165,7 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="hero-avatar" aria-hidden="true">
-            RB
-          </div>
+          <img className="hero-avatar" src="/PP.png" alt="Robin Bechlem" />
         </div>
       </header>
     </>
