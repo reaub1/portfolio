@@ -1,3 +1,9 @@
+.flag-icon {
+  font-size: 0.9em;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
 .cv-wrapper {
   padding: 3rem 2rem;
   background: linear-gradient(135deg, rgba(100, 108, 255, 0.12), rgba(14, 165, 233, 0.08));

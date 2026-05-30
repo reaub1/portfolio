@@ -192,7 +192,7 @@ function CV() {
             <div className="timeline-item fade-in">
               <span className="timeline-date">Sept. 2023 – Present</span>
               <div className="timeline-content">
-                <h4>Apprentice Software Engineer</h4>
+                <h4>Apprentice Software Engineer <span className="flag-icon">🇫🇷</span></h4>
                 <p className="timeline-org">Safran Landing Systems – SLS Information Systems, Molsheim, France</p>
                 <p>Develop and maintain information system applications supporting MRO (Maintenance, Repair &amp; Overhaul) France operations. Design and deploy Power BI dashboards backed by SQL Server views and DAX measures. Train business teams on data warehouse tools and contribute to information systems project management.</p>
               </div>
@@ -200,7 +200,7 @@ function CV() {
             <div className="timeline-item fade-in">
               <span className="timeline-date">Aug. – Oct. 2025</span>
               <div className="timeline-content">
-                <h4>Software Engineering Intern – International Mobility</h4>
+                <h4>Software Engineering Intern – International Mobility <span className="flag-icon">🇬🇧</span></h4>
                 <p className="timeline-org">Safran Landing Systems, Gloucester, United Kingdom</p>
                 <p>Mapped the site's application landscape and enterprise architecture in LeanIX (SAP).</p>
               </div>
@@ -208,9 +208,17 @@ function CV() {
             <div className="timeline-item fade-in">
               <span className="timeline-date">Apr. – Jun. 2022</span>
               <div className="timeline-content">
-                <h4>Developer Intern</h4>
+                <h4>Developer Intern <span className="flag-icon">🇫🇷</span></h4>
                 <p className="timeline-org">LPB Conseil, Strasbourg, France</p>
                 <p>Developed Power BI dashboards and maintained ERP software.</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">Jul. – Aug. 2018–2021</span>
+              <div className="timeline-content">
+                <h4>Warehouse Worker <span className="flag-icon">🇨🇭</span></h4>
+                <p className="timeline-org">Robusta Flex, Basel, Switzerland</p>
+                <p>Managed a Kanban stock system and performed various team-based handling tasks.</p>
               </div>
             </div>
           </div>
