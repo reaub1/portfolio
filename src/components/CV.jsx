@@ -7,13 +7,13 @@ function CV() {
       <div className="cv-content">
         <div className="cv-header">
           <h3>Robin Bechlem</h3>
-          <p>Computer Science Student | Nationality: CH - FR</p>
+          <p>Software Engineer – Information Systems &amp; Data | Nationality: CH - FR</p>
           <p>
             <a href="mailto:robin.bechlem@gmail.com">robin.bechlem@gmail.com</a>
             {' · '}
             <a href="https://www.linkedin.com/in/robin-bechlem-7b948b1b9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
-          <a className="cv-download-btn" href="/robin-bechlem-cv.pdf" download>
+          <a className="cv-download-btn" href="/CV_BECHLEM_Robin.pdf" download>
             ↓ Download CV
           </a>
         </div>
@@ -26,7 +26,7 @@ function CV() {
               <div className="timeline-content">
                 <h4>Engineering degree in Computer Science</h4>
                 <p className="timeline-org">CNAM EI, Eckbolsheim, France</p>
-                <p>Advanced algorithms, advanced design, data structures, SOLID programming, project management, advanced systems, management, business management.</p>
+                <p>Advanced algorithms, SOLID, TDD, Business Intelligence, information systems, project management, AI.</p>
               </div>
             </div>
             <div className="timeline-item fade-in">
@@ -42,7 +42,7 @@ function CV() {
               <div className="timeline-content">
                 <h4>DUT in Computer Science with scientific specialization</h4>
                 <p className="timeline-org">IUT Robert-Schuman, Illkirch-Graffenstaden, France</p>
-                <p>Supervised project.</p>
+                <p>Software design, image processing, AI, supervised project.</p>
               </div>
             </div>
             <div className="timeline-item fade-in">
@@ -57,10 +57,34 @@ function CV() {
         </div>
 
         <div className="cv-section fade-in">
-          <h3>Projects</h3>
+          <h3>Final-Year Projects (Safran Landing Systems)</h3>
           <div className="cv-item">
-            <h4>November 2025 – Shell Project</h4>
-            <p>Reproduced a shell in C. Engineering school project.</p>
+            <h4>2025 – 2026 · Vérac – Application portal and access management for MRO France</h4>
+            <p><em>.NET 10 / Vue.js / LDAP / GitLab CI/CD – Molsheim</em></p>
+            <p>Built a layered Clean Architecture (domain, business, data access, API, client) with dedicated test projects. Integrated Windows/SSO authentication via LDAP and SQL Server. Applied TDD and set up a GitLab CI/CD pipeline.</p>
+          </div>
+          <div className="cv-item">
+            <h4>2024 – 2026 · OptiPlanif – Redesign of MRO Supply Chain Planning</h4>
+            <p><em>Power BI / SQL Server / DAX – Molsheim</em></p>
+            <p>Replaced the legacy planning system with a Power BI reporting solution backed by SQL Server views. Modeled business rules (BPMN, Draw.io) and designed the underlying data architecture. Deployed to production for the MRO France Supply Chain.</p>
+          </div>
+        </div>
+
+        <div className="cv-section fade-in">
+          <h3>Academic Projects</h3>
+          <div className="cv-item">
+            <h4>March 2025 – SMART – Product recognition using computer vision</h4>
+            <p><em>Python / Computer Vision</em></p>
+            <p>Built automatic recognition of a predefined set of products.</p>
+          </div>
+          <div className="cv-item">
+            <h4>January 2025 – TaxiBrousse – Internal carpooling application for Alcatel-Lucent Enterprise</h4>
+            <p><em>Android Studio</em></p>
+            <p>Developed a mobile carpooling app (similar to BlaBlaCar) for internal company use, with backend hosted on Vercel.</p>
+          </div>
+          <div className="cv-item">
+            <h4>November 2024 – Shell Project</h4>
+            <p>Reproduced a POSIX-compliant shell in C. Engineering school project.</p>
           </div>
           <div className="cv-item">
             <h4>September 2024 – OniDefense</h4>
@@ -106,31 +130,47 @@ function CV() {
             <div>
               <h4>Programming Languages</h4>
               <div className="skill-badges">
-                {['C', 'C++', 'C#', 'Java', 'Python', 'JavaScript', 'PHP', 'SQL', 'HTML/CSS', 'Bash', 'LaTeX', 'VBA'].map((s) => (
+                {['C', 'C++', 'C#', 'Python', 'SQL', 'T-SQL', 'JavaScript', 'HTML/CSS', 'Bash', 'LaTeX'].map((s) => (
                   <span key={s} className="skill-badge skill-badge--lang">{s}</span>
                 ))}
               </div>
             </div>
             <div>
-              <h4>Frameworks & Engines</h4>
+              <h4>Frameworks & Libraries</h4>
               <div className="skill-badges">
-                {['React', 'Unity', 'SDL2', 'Android Studio'].map((s) => (
+                {['.NET', 'ASP.NET Core', 'Vue.js', 'Entity Framework Core', 'React', 'Unity', 'SDL2'].map((s) => (
                   <span key={s} className="skill-badge skill-badge--framework">{s}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4>Data & BI</h4>
+              <div className="skill-badges">
+                {['SQL Server', 'Power BI', 'DAX', 'ETL', 'Data Warehouse', 'Data Modeling', 'Reporting'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--area">{s}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h4>Practices</h4>
+              <div className="skill-badges">
+                {['OOP', 'SOLID', 'Design Patterns', 'Clean Architecture', 'TDD', 'CI/CD', 'Git'].map((s) => (
+                  <span key={s} className="skill-badge skill-badge--soft">{s}</span>
                 ))}
               </div>
             </div>
             <div>
               <h4>Tools</h4>
               <div className="skill-badges">
-                {['Git', 'Visual Studio', 'Code::Blocks', 'Power BI', 'Adobe Suite', 'Office Suite'].map((s) => (
+                {['Visual Studio', 'VS Code', 'GitLab', 'GitHub', 'LeanIX', 'Microsoft Office', 'Access'].map((s) => (
                   <span key={s} className="skill-badge skill-badge--tool">{s}</span>
                 ))}
               </div>
             </div>
             <div>
-              <h4>Areas</h4>
+              <h4>Domains</h4>
               <div className="skill-badges">
-                {['Image Processing', 'AI', 'Systems & Networks', 'OOP', 'Web Dev', 'Data Warehouse'].map((s) => (
+                {['Software Development', 'Web Development', 'Business Intelligence', 'Database Management', 'Data Analysis'].map((s) => (
                   <span key={s} className="skill-badge skill-badge--area">{s}</span>
                 ))}
               </div>
@@ -139,16 +179,8 @@ function CV() {
               <h4>Languages</h4>
               <div className="skill-badges">
                 <span className="skill-badge skill-badge--lang">French (native)</span>
-                <span className="skill-badge skill-badge--lang">English (intermediate)</span>
+                <span className="skill-badge skill-badge--lang">English (fluent)</span>
                 <span className="skill-badge skill-badge--lang">German (basic)</span>
-              </div>
-            </div>
-            <div>
-              <h4>Soft Skills</h4>
-              <div className="skill-badges">
-                {['Teamwork', 'Adaptability', 'Flexibility', 'Autonomy'].map((s) => (
-                  <span key={s} className="skill-badge skill-badge--soft">{s}</span>
-                ))}
               </div>
             </div>
           </div>
@@ -158,27 +190,27 @@ function CV() {
           <h3>Professional Experience</h3>
           <div className="timeline">
             <div className="timeline-item fade-in">
-              <span className="timeline-date">Sep 2022 – Present</span>
+              <span className="timeline-date">Sept. 2023 – Present</span>
               <div className="timeline-content">
-                <h4>Computer Engineering Apprentice</h4>
-                <p className="timeline-org">Safran Landing Systems, Molsheim, France</p>
-                <p>Application development, software maintenance, Power BI dashboards, IT project management, Data Warehouse training for employees.</p>
+                <h4>Apprentice Software Engineer</h4>
+                <p className="timeline-org">Safran Landing Systems – SLS Information Systems, Molsheim, France</p>
+                <p>Develop and maintain information system applications supporting MRO (Maintenance, Repair &amp; Overhaul) France operations. Design and deploy Power BI dashboards backed by SQL Server views and DAX measures. Train business teams on data warehouse tools and contribute to information systems project management.</p>
               </div>
             </div>
             <div className="timeline-item fade-in">
-              <span className="timeline-date">Apr – Jun 2022</span>
+              <span className="timeline-date">Aug. – Oct. 2025</span>
+              <div className="timeline-content">
+                <h4>Software Engineering Intern – International Mobility</h4>
+                <p className="timeline-org">Safran Landing Systems, Gloucester, United Kingdom</p>
+                <p>Mapped the site's application landscape and enterprise architecture in LeanIX (SAP).</p>
+              </div>
+            </div>
+            <div className="timeline-item fade-in">
+              <span className="timeline-date">Apr. – Jun. 2022</span>
               <div className="timeline-content">
                 <h4>Developer Intern</h4>
                 <p className="timeline-org">LPB Conseil, Strasbourg, France</p>
-                <p>Developed Power BI dashboards, maintained ERP software.</p>
-              </div>
-            </div>
-            <div className="timeline-item fade-in">
-              <span className="timeline-date">Jul – Aug 2018–2021</span>
-              <div className="timeline-content">
-                <h4>Warehouse Worker</h4>
-                <p className="timeline-org">Robusta Flex, Basel, Switzerland</p>
-                <p>Managed a Kanban stock system and performed various team-based handling tasks.</p>
+                <p>Developed Power BI dashboards and maintained ERP software.</p>
               </div>
             </div>
           </div>

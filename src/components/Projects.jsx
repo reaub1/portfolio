@@ -2,6 +2,30 @@ import './Projects.css';
 
 const projects = [
   {
+    title: 'Vérac',
+    description: 'Application portal and access management for MRO France at Safran Landing Systems. Built with Clean Architecture (.NET 10, Vue.js), Windows/SSO authentication via LDAP, TDD, and a GitLab CI/CD pipeline.',
+    stack: ['C#', '.NET', 'Vue.js', 'SQL Server', 'CI/CD'],
+    github: null,
+  },
+  {
+    title: 'OptiPlanif',
+    description: 'Redesign of MRO Supply Chain Planning at Safran Landing Systems. Replaced the legacy planning system with a Power BI solution backed by SQL Server views and DAX measures. Deployed to production.',
+    stack: ['Power BI', 'SQL Server', 'DAX'],
+    github: null,
+  },
+  {
+    title: 'SMART',
+    description: 'Automatic product recognition using computer vision. Built a pipeline to identify a predefined set of products from images using Python.',
+    stack: ['Python', 'Computer Vision'],
+    github: null,
+  },
+  {
+    title: 'TaxiBrousse',
+    description: 'Internal carpooling mobile app for Alcatel-Lucent Enterprise, similar to BlaBlaCar. Android Studio front-end with backend hosted on Vercel.',
+    stack: ['Android Studio', 'Java'],
+    github: null,
+  },
+  {
     title: 'Arkanoid',
     description: 'Classic Arkanoid brick-breaking game implemented in C with SDL2. Includes collision detection, levels, and score tracking.',
     stack: ['C', 'SDL2'],
@@ -46,6 +70,13 @@ const projects = [
 ];
 
 const stackColors = {
+  '.NET': '#512bd4',
+  'Vue.js': '#42b883',
+  'SQL Server': '#cc2927',
+  'Power BI': '#f2c811',
+  DAX: '#f2c811',
+  'CI/CD': '#fc6d26',
+  'Computer Vision': '#3498db',
   C: '#a8b4ff',
   'C#': '#9b59b6',
   'C++': '#c0392b',
