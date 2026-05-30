@@ -14,7 +14,7 @@ function CV() {
             <a href="https://www.linkedin.com/in/robin-bechlem-7b948b1b9/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
           <a className="cv-download-btn" href="/CV_BECHLEM_Robin_FR.pdf" download>
-            ↓ Download CV
+            ↓ Download CV (French version)
           </a>
           <a className="cv-download-btn" href="/CV_BECHLEM_Robin_EN.pdf" download>
             ↓ Download CV (English version)
